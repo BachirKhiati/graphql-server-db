@@ -9,13 +9,9 @@ mongoose.Promise = global.Promise;
 mongoose.set('debug', true); // debug mode on
 
 try {
-  mongoose.connect(constants.DB_URL, {
-    useMongoClient: true,
-  });
+  mongoose.connect(constants.DB_URL,);
 } catch (err) {
-  mongoose.createConnection(constants.DB_URL, {
-    useMongoClient: true,
-  });
+  mongoose.createConnection(constants.DB_URL);
 }
 
 mongoose.connection
